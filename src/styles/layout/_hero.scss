@@ -1,0 +1,66 @@
+.hero {
+    @include backgroundImg;
+    background-image: url(../../dist/img/IMAGE.jpg);
+    
+    &__logo {
+        width: 35%;
+        margin: 60px  auto 20px auto;
+    }
+
+    &__tagline {
+        width: 90%;
+        margin: 0 auto;
+        font-size: $medium-font-size;
+        line-height: 1.35rem;
+    }
+
+    &__location {
+        color: $text-color-light;
+        font-size: $normal-font-size;
+        padding: $spacing-md;
+    }
+
+    @include breakpoint(lg-phone) {
+        &__logo {
+            width: 30%;
+            margin-top: 90px;
+        }
+
+        &__tagline {
+            width: 80%;
+        }
+
+        &__location {
+            padding: 25px;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        &__logo {
+            margin: 120px auto 30px auto;
+        }
+
+        &__tagline {
+            width: 65%;
+        }
+
+        &__location {
+            padding: 40px;
+        }
+    }
+
+    @include breakpoint(desktop) {
+        &__logo {
+            width: 25%;
+            margin: 240px auto 60px auto;
+        }
+
+        &__tagline {
+            width: 65%;
+        }
+
+        &__location {
+            padding-bottom: 130px;
+        }
+    }
+}

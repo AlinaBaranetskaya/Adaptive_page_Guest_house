@@ -1,0 +1,25 @@
+@mixin backgroundImg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $text-color-light;
+    text-align: center;
+}
+
+@mixin separator {
+    content: "";
+    width: 25px;
+    height: 5px;
+    background-color: #E08631;
+    display: block;
+    margin: 0 auto;
+    margin: 15px auto;
+}
+
+@mixin pForMobile {
+    font-size: $normal-font-size;
+    line-height: 1.2rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}

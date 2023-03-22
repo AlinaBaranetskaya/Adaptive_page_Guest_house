@@ -1,0 +1,62 @@
+.button {
+    display: block;
+    padding: 7px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    align-self: center;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    
+    &.book {
+        background-color: $text-color-dark-secondary;
+        color: $text-color-light;
+    }
+
+    &.subscribe {
+        position: absolute;
+        font-size: 12px;
+        border: none;
+        background-color: $text-color-dark-secondary;
+        color: $text-color-light;
+        right: 14%;
+        top: 50%;
+        width: 65px;
+        cursor: pointer;
+        padding: 4px 3px;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+
+    &:hover{
+        background-color: $secondary-color;
+    }
+
+    @include breakpoint(tablet) {
+        padding: 10px 25px;
+    }
+
+    @include breakpoint(desktop) {
+        padding: 12px 30px;
+    }
+}
+
+.general_info .button {
+    margin: 0 auto;
+    @include breakpoint(lg-phone) {
+        margin: 0;
+    }
+}
+
+.header .button {
+    @include breakpoint(lg-phone) {
+        margin: auto 3% auto 0;
+    }
+}

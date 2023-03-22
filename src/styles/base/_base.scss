@@ -1,0 +1,68 @@
+@import "../utils/variables";
+@import "../utils/mixin";
+@import "./utils/_breakpoints";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 15px;
+
+    @include breakpoint(lg-phone) {
+        font-size: 18px;
+    }
+
+    @include breakpoint(tablet) {
+        font-size: 20px;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 96%;
+
+    @include breakpoint(xlDesktop) {
+        width: 1200px;
+    }
+}
+
+h4 {
+    font-size: 18px;
+    font-size: $h4-font-size;
+    line-height: 24px;
+    line-height: $spacing-lg;
+    text-align: center;
+    padding: 15px 0;
+
+    &::before {
+        @include separator;
+    }
+
+    @include breakpoint(desktop) {
+        padding: 50px 0 20px 0;
+    }
+}
+
+footer h4 {
+    &::before {
+        content: "";
+        display: none;
+    }
+}
+
+p {
+    @include pForMobile;
+}

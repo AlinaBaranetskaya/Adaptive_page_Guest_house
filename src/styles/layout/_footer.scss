@@ -1,0 +1,147 @@
+.footer {
+    background-color: $background-color-footer;
+    color: $text-color-light;
+    padding-bottom: 15px;
+
+    & a {
+        color: $text-color-light;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    & .links {
+        &__pages {
+            grid-area: pages;
+        }
+
+        &__media {
+            grid-area: media;
+        }
+
+        &__subscribe {
+            grid-area: subscribe;
+        }
+
+        &_pages__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        &_media__list {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            margin: 0 auto;
+
+            & a {
+                font-size: 25px;
+            }
+        }
+
+        &_subscribe__form {
+            position: relative;
+
+            & input {
+                display: block;
+                margin: 15px auto;
+                width: 75%;
+                padding-left: 15px;
+                height: 30px;
+                border: none;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto 15px auto;
+        height: 35px;
+    }
+
+    &_copyrights {
+        font-size: 12px;
+
+        & a {
+            margin: 0 auto;
+        }
+
+        & a:first-of-type {
+            padding-right: 15px;
+        }
+
+        & p {
+            margin: 5px auto;
+        }
+    }
+
+    @include breakpoint(lg-phone) {}
+
+    @include breakpoint(tablet) {
+        &_links {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 15px;
+            display: grid;
+            grid-template-areas:
+                "pages media"
+                "subscribe subscribe"
+            ;
+        }
+
+        & .links {
+            &_pages__list {
+                grid-gap: 20px;
+                width: 70%;
+            }
+
+            &_media__list {
+                display: flex;
+                flex-direction: column;
+
+                & li {
+                    padding-bottom: 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        &_links {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 15px;
+            display: grid;
+            grid-template-areas: "pages media subscribe";
+        }
+
+        & .links {
+            &_media__list {
+                flex-direction: row;
+            }
+
+            & ul {
+                margin-left: 0;
+            }
+
+            & h4 {
+                text-align: start;
+            }
+        }
+    }
+}

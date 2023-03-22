@@ -1,0 +1,45 @@
+$text-color-light: #ffffff;
+$text-color-dark-main: #333333;
+$text-color-dark-secondary: #52503B;
+$background-color: #FAF8F0;
+$background-color-footer: #52503B;
+$secondary-color: #E08631;
+$breakpoint-mobile-large:481px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 993px;
+
+/*========== Typography ==========*/
+$body-font: "Poppins", sans-serif;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h4-font-size: 1.2rem;
+// $smaller-font-size: 0.75rem;
+$small-font-size: 0.9rem;
+$normal-font-size: 0.935rem;
+$medium-font-size: 1.15rem;
+$big-font-size: 1.35rem;
+$bigger-font-size: 2rem;
+$biggest-font-size: 2.5rem;
+$huge-font-size: 3.7rem;
+
+/*========== Font weight ==========*/
+$font-medium: 500;
+$font-semi-bold: 600;
+
+/*========== Margin ==========*/
+$mb-0-5: 0.5rem;
+$mb-0-75: 0.75rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+$mb-2-5: 2.5rem;
+
+$header-height: 3.7rem;
+
+/*========== Spacing ==========*/
+$spacing-sm: 0.75rem;
+$spacing-md: 1.35rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2.2rem;
+$spacing-xxl: 2.7rem;
+$spacing-xxxl: 3.9rem;

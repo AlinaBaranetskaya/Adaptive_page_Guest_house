@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./dist/css/styles.min.css" />
+  <script src="https://kit.fontawesome.com/88607aadf9.js" crossorigin="anonymous"></script>
+  <title>Guest house</title>
+</head>
+
+<body>
+  <header class="container">
+    <div class="header">
+      <img class="header__logo" src="./dist/img/logo.png" alt="logo">
+
+      <nav class="header__menu">
+        <ul class="header_navigation dropdown">
+          <li class="header_navigation__item"><a href="https://">Start</a></li>
+          <li class="header_navigation__item"><a href="https://">Contact</a></li>
+          <li class="header_navigation__item"><a href="https://">Our history</a></li>
+        </ul>
+      </nav>
+
+      <button class="button">Book now</button>
+
+      <div class="header__burger" onclick="showCross(this); showMenu()">
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero">
+        <img class="hero__logo" src="./dist/img/logo.png" alt="logo">
+        <h1 class="hero__tagline">Experience the perfect combination of modern housing & natural scenery.</h1>
+        <p class="hero__location">Located in Lofoten, Norway</p>
+      </div>
+    </div>
+
+    <div class="container general_info">
+      <div class="general_info__text">
+        <div class="general_info__text_block">
+          <p class="text_block__first">The Guest House is the perfect weekend get-away housing. Located in the Norwegian
+            archipelago, Lofoten, it's a
+            great escape from the hustle and bustle of the city. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit.
+            Nullam scelerisque aliquam odio et faucibus. Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex,
+            condimentum dapibus congue et, vulputate ut ligula.
+          </p>
+          <div class="text_block__second">
+            <p>Below you'll find information about the accommodation and what's included in the
+              price. Don't hesitate to
+              reach
+              out to us vi the contact page if you have any questions around your stay.
+            </p>
+
+            <button class="button book">Book now</button>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="general_info__tagline">The Guest House is the perfect weekend getaway cabin.</h1>
+      <div class="general_info__img"></div>
+    </div>
+
+    <div class="container arrangements">
+      <div class="arrangements_general">
+        <h4>Sleeping arrangements.</h4>
+        <p class="arrangements_general__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          scelerisque aliquam odio et faucibus. Nulla
+          rhoncus feugiat eros quis consectetur.</p>
+
+        <div class="arrangements_details">
+          <div class="arrangements_details__item">
+            <img src="./dist/img/Beds.png" alt="">
+            <p>Beds</p>
+            <p>The cabin is equipped with 12 beds, 4 of which are in bunk. The rent includes linens for all beds.</p>
+          </div>
+
+          <div class="arrangements_details__item">
+            <img src="./dist/img/Bedrooms.png" alt="">
+            <p>Bedrooms</p>
+            <p>Spread out over two floors, the cabin offers 4 bedrooms. Ranging from 2 to 4 beds per room.</p>
+          </div>
+
+          <div class="arrangements_details__item">
+            <img src="./dist/img/Bathrooms.png" alt="">
+            <p>Bathrooms</p>
+            <p>The cabin has three bathrooms, all equipped with showers and one with a bath tub,</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container escape">
+      <div class="escape_general">
+        <h4>The perfect escape.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Nulla
+          rhoncus feugiat eros quis consectetur.</p>
+      </div>
+
+      <div class="escape_details">
+        <div class="escape_details__item">
+          <img src="./dist/img/Appliances.png" alt="">
+          <p>Modern Kitchen Appliances</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="escape_details__item">
+          <img src="./dist/img/Air.png" alt="">
+          <p>Air Conditioner</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="escape_details__item">
+          <img src="./dist/img/Outdoor.png" alt="">
+          <p>Outdoor Paths</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="escape_details__item">
+          <img src="./dist/img/Storage.png" alt="">
+          <p>Storage Solutions</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="escape_details__item">
+          <img src="./dist/img/Coffee.png" alt="">
+          <p>Coffee Maker</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="escape_details__item">
+          <img src="./dist/img/Cutlery.png" alt="">
+          <p>Cutlery Selection</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="escape_details__item">
+          <img src="./dist/img/Scenery.png" alt="">
+          <p>Natural Scenery</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="escape_details__item">
+          <img src="./dist/img/Take-away.png" alt="">
+          <p>Take-away Options</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container comments">
+      <div class="comments_general">
+        <h4>Past guests.</h4>
+        <p>Don't take our word for it! Have a look at what our previous guests say about their stay at the Guest
+          House.
+        </p>
+      </div>
+
+      <div>comments</div>
+    </div>
+
+    <div class="container together">
+      <div class="together__img"></div>
+      <div class="together__info">
+        <div class="together__general">
+          <h4>Come together.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="together_details">
+          <div class="together_details__item">
+            <img src="./dist/img/wifi.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+
+          <div class="together_details__item">
+            <img src="./dist/img/food.png" alt="">
+            <p>Nullam scelerisque aliquam odio et faucibus.</p>
+          </div>
+
+          <div class="together_details__item">
+            <img src="./dist/img/abc.png" alt="">
+            <p>Nulla rhoncus feugiat eros quis consectetur.</p>
+          </div>
+
+          <div class="together_details__item">
+            <img src="./dist/img/fork.png" alt="">
+            <p>Morbi neque ex, condimentum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container book">
+      <div class="book_general">
+        <p>We're already booked up for the spring — hurry up & secure your stay for the summer.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="buttons_block">
+          <button class="button">Contact</button>
+          <button class="button book">Book now</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container footer">
+        <div class="footer_links">
+          <div class="footer_links__pages">
+            <h4>Pages</h4>
+            <ul class="links_pages__list">
+              <li><a href="https://">Start</a></li>
+              <li><a href="https://">Contact</a></li>
+              <li><a href="https://">Our history</a></li>
+              <li><a href="https://">Licenses</a></li>
+              <li><a href="https://">Instructions</a></li>
+              <li><a href="https://">Style guide</a></li>
+            </ul>
+          </div>
+
+          <div class="footer_links__media">
+            <h4>Social Media</h4>
+            <ul class="links_media__list">
+              <li><a href="https://web.telegram.org"><i class="fa-brands fa-telegram"></i></a></li>
+              <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="footer_links__subscribe">
+            <h4>Newsletter</h4>
+            <p>Subscribe, if you want to recive news about our disconts</p>
+            <form action="#" class="links_subscribe__form">
+              <input type="mail" placeholder="Email">
+              <button type="submit" class="button subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer_copyrights">
+          <img class="footer__logo" src="./dist/img/logo.png" alt="logo">
+          <p> &#169; Guest House, LLC. All rights reserved. Powered by Webflow</p>
+          <p><a href="tel:+47 (0) 702 88 12 34">+47 (0) 702 88 12 34</a>
+            <a href="mailto:example@webflow.io">example@webflow.io</a>
+          </p>
+          <p>Klubbvika 12, 8310 Kabelvag, Norway</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+  <script src="./dist/js/scripts.min.js"></script>
+</body>
+
+</html>

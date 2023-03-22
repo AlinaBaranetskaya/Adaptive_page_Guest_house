@@ -1,0 +1,60 @@
+.together {
+    &__img {
+        @include backgroundImg;
+        background-image: url(../../dist/img/room.jpg);
+        height: 200px;
+    }
+
+    &_details {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;    
+        width: 80%;
+        text-align: center;
+        margin: 20px auto;
+
+        &__item p {
+            display: none;
+        }
+    }
+
+    @include breakpoint(tablet) {
+
+        &__img {
+            height: 300px;
+        }
+
+        &_details {
+            width: 60%;
+        }
+    }
+
+    @include breakpoint(desktop) {
+
+        &__img {
+            height: 550px;
+        }
+
+        &__info {
+            display: flex;
+        }
+
+        &__general {
+            padding-bottom: 50px;
+        }
+
+        &_details {
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &__item {
+                display: flex;
+
+                & p {
+                    display: block;
+                }
+            }
+        }
+    }
+}

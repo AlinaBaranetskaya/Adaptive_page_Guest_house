@@ -1,0 +1,85 @@
+.arrangements {
+    text-align: center;
+    background-color: $background-color;
+  
+    & h6 {
+      padding: 15px 0;
+    }
+  
+    &_general__info {
+      width: 90%;
+    }
+  
+    &_details {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px 0;
+  
+      &__item {
+        & p:first-of-type {
+          padding: 10px 0 0 0;
+        }
+  
+        & p:last-of-type {
+          display: none;
+        }
+  
+        & img {
+          width: 75%;
+        }
+      }
+    }
+  
+    @include breakpoint(lg-phone) {
+      &_details {
+        width: 80%;
+        padding: 25px 0;
+  
+        &__item {
+          & img {
+            width: 65px;
+          }
+  
+          & p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  
+    @include breakpoint(tablet) {
+      &_general__info {
+        width: 70%;
+      }
+  
+      &_details {}
+    }
+  
+    @include breakpoint(desktop) {
+      &_general__info {
+        width: 50%;
+      }
+  
+      &_details {
+        padding: 40px 0 60px 0;
+  
+        &__item {
+          & p:first-of-type {
+            padding: 15px 0;
+          }
+  
+          & p:last-of-type {
+            display: block;
+            width: 90%;
+          }
+  
+          & img {
+            width: 80px;
+          }
+        }
+      }
+    }
+  
+  }

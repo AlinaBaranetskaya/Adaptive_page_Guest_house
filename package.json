@@ -1,0 +1,35 @@
+{
+    "name": "adaptive_page_guest_house",
+    "version": "1.0.0",
+    "description": "adaptive_page_for_house_renting",
+    "main": "app.js",
+    "scripts": {
+        "test": "node main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlinaBaranetskaya/adaptive_page_Guest_house"
+    },
+    "keywords": [
+        "adaptive_page_guest_house"
+    ],
+    "author": "Alina Baranetska",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/AlinaBaranetskaya/adaptive_page_Guest_house/issues"
+    },
+    "homepage": "https://github.com/AlinaBaranetskaya/adaptive_page_Guest_house#readme",
+    "devDependencies": {
+        "browser-sync": "^2.27.4",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-clean": "^0.4.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-js-minify": "0.0.3",
+        "gulp-sass": "^5.0.0",
+        "gulp-uglify": "^3.0.2",
+        "sass": "^1.35.1"
+    }
+}

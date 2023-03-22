@@ -1,0 +1,167 @@
+.header {
+    background-color: #52503b;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        width: 20%;
+        margin: auto 0 auto 3%;
+    }
+
+    & .dropdown {
+        display: none;
+
+        &.show {
+            display: block;
+            position: absolute;
+            left: 0;
+            padding-top: 75px;
+            height: 100%;
+            width: 100%;
+            background-color: $text-color-light;
+        }
+    }
+
+    &_navigation__item {
+        text-align: center;
+        padding: 20px 0;
+
+        &:hover {
+            border: 2px $text-color-dark-secondary solid;
+
+            @include breakpoint(lg-phone) {
+                border: none;
+            }
+        }
+    }
+
+    &_navigation__item a {
+        color: $text-color-dark-secondary;
+        font-size: large;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    &__burger {
+        position: relative;
+        width: 36px;
+        height: 35px;
+        display: block;
+        margin: 2px 3% 7px 3%;
+        cursor: pointer;
+
+        &:before {
+            height: 3px;
+            width: 26px;
+            position: absolute;
+            background: white;
+            margin: 0px 5px;
+            border-radius: 5px;
+            top: 9px;
+            content: '';
+        }
+
+        &:after {
+            content: '';
+            bottom: 5px;
+            height: 3px;
+            width: 26px;
+            position: absolute;
+            background: white;
+            margin: 0px 5px;
+            border-radius: 5px;
+        }
+
+        & span {
+            height: 3px;
+            width: 26px;
+            position: absolute;
+            background: white;
+            margin: 0px 5px;
+            border-radius: 5px;
+            top: 18px;
+        }
+    }
+
+    &__burger.active {
+        background-color: $secondary-color;
+        position: absolute;
+        right: -15px;
+        top: 0;
+
+        &:before {
+            opacity: 0;
+        }
+
+        &:after {
+            transform: rotate(-38deg);
+            bottom: 16px;
+            transition: 0.4s;
+        }
+
+        & span {
+            transition: 0.5s;
+            transform: rotate(38deg);
+            top: 16px;
+            transition: 0.4s;
+        }
+    }
+
+    @include breakpoint(lg-phone) {
+
+        & .dropdown {
+            display: flex;
+            width: 255px;
+            justify-content: space-between;
+        }
+
+        &_navigation__item {
+            padding: 23px 0;
+
+            &:hover {
+                border: none;
+            }
+        }
+
+
+        &_navigation__item a {
+            color: #ffffff;
+            font-size: $normal-font-size;
+        }
+
+        &__burger {
+            display: none;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        &__logo {
+            width: 15%;            
+        }
+
+        & .dropdown {
+            min-width: 325px;
+        }
+
+        &_navigation__item {
+            padding: 20px 0;
+        }
+    }
+
+    @include breakpoint(desktop) {
+        &__logo {
+            width: 13%;            
+        }
+
+        & .dropdown {
+            width: 400px;
+        }
+
+        &_navigation__item {
+            padding: 30px 0;
+        }
+    }
+}

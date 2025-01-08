@@ -4,12 +4,29 @@
     justify-content: space-between;
 
     &__logo {
+        grid-area: logo;
         width: 20%;
         margin: auto 0 auto 3%;
+        cursor: pointer;
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & button {
+        grid-area: button;
+    }
+
+    &__menu {
+        grid-area: nav;
     }
 
     & .dropdown {
         display: none;
+        grid-area: nav;
+        margin: 0 auto;
+        width: 340px;
 
         &.show {
             display: block;
@@ -25,24 +42,25 @@
     &_navigation__item {
         text-align: center;
         padding: 20px 0;
+        border: 2px transparent solid;
 
         &:hover {
-            border: 2px $text-color-dark-secondary solid;
+            border: 2px $secondary-color solid;
 
             @include breakpoint(lg-phone) {
                 border: none;
             }
         }
+
+        &:hover a {
+            color: $secondary-color;
+        }
     }
 
     &_navigation__item a {
         color: $text-color-dark-secondary;
-        font-size: large;
+        // font-size: large;
         text-transform: uppercase;
-
-        &:hover {
-            color: $secondary-color;
-        }
     }
 
     &__burger {
@@ -50,7 +68,7 @@
         width: 36px;
         height: 35px;
         display: block;
-        margin: 2px 3% 7px 3%;
+        margin: 2px 3% 7px 0;
         cursor: pointer;
 
         &:before {
@@ -89,7 +107,7 @@
     &__burger.active {
         background-color: $secondary-color;
         position: absolute;
-        right: -15px;
+        right: -10px;
         top: 0;
 
         &:before {
@@ -111,25 +129,30 @@
     }
 
     @include breakpoint(lg-phone) {
+        display: grid;
+        grid-template-areas:
+            "logo button"
+            "nav nav";
+
+        &__logo {
+            width: 35%;
+            margin: 10px 0 auto 10px;
+        }
 
         & .dropdown {
             display: flex;
-            width: 255px;
             justify-content: space-between;
         }
 
         &_navigation__item {
-            padding: 23px 0;
-
-            &:hover {
-                border: none;
-            }
+            padding: 0;
+            margin: 8px 0;
+            border: none;
         }
-
 
         &_navigation__item a {
             color: #ffffff;
-            font-size: $normal-font-size;
+            font-size: $small-font-size;
         }
 
         &__burger {
@@ -138,8 +161,11 @@
     }
 
     @include breakpoint(tablet) {
+        display: flex;
+
         &__logo {
-            width: 15%;            
+            width: 15%;
+            margin: auto 0 auto 3%;
         }
 
         & .dropdown {
@@ -147,13 +173,18 @@
         }
 
         &_navigation__item {
-            padding: 20px 0;
+            margin: 20px 0;
+        }
+
+        &_navigation__item a {
+            color: #ffffff;
+            font-size: $smaller-font-size;
         }
     }
 
     @include breakpoint(desktop) {
         &__logo {
-            width: 13%;            
+            width: 13%;
         }
 
         & .dropdown {
@@ -161,7 +192,11 @@
         }
 
         &_navigation__item {
-            padding: 30px 0;
+            margin: 30px 0;
+        }
+
+        &_navigation__item a {
+            font-size: $normal-font-size;
         }
     }
 }

@@ -12,18 +12,23 @@
 
 <body>
   <header class="container">
+
+    <a name="start"></a>
+
     <div class="header">
-      <img class="header__logo" src="./dist/img/logo.png" alt="logo">
+      <a class="header__logo" href="https://www.google.com/"><img class="header__logo_img" src="./dist/img/logo.png"
+          alt="logo"></a>
 
       <nav class="header__menu">
         <ul class="header_navigation dropdown">
-          <li class="header_navigation__item"><a href="https://">Start</a></li>
-          <li class="header_navigation__item"><a href="https://">Contact</a></li>
-          <li class="header_navigation__item"><a href="https://">Our history</a></li>
+          <!-- <li class="header_navigation__item"><a href="https://">Start</a></li> -->
+          <li class="header_navigation__item"><a href="#about_us">About us</a></li>
+          <li class="header_navigation__item"><a href="../reviews.html">Reviews</a></li>
+          <li class="header_navigation__item"><a href="#contacts">Contacts</a></li>
         </ul>
       </nav>
 
-      <button class="button">Book now</button>
+      <button class="button" onclick="toggleBookingForm()">Book now</button>
 
       <div class="header__burger" onclick="showCross(this); showMenu()">
         <span></span>
@@ -32,17 +37,18 @@
   </header>
 
   <main>
-    <div class="container">
-      <div class="hero">
-        <img class="hero__logo" src="./dist/img/logo.png" alt="logo">
-        <h1 class="hero__tagline">Experience the perfect combination of modern housing & natural scenery.</h1>
-        <p class="hero__location">Located in Lofoten, Norway</p>
-      </div>
+    <div class="container hero">
+      <img class="hero__logo" src="./dist/img/logo.png" alt="logo">
+      <h1 class="hero__tagline">Experience the perfect combination of modern housing & natural scenery.</h1>
+      <p class="hero__location">Located in Lofoten, Norway</p>
     </div>
+
+    <a name="about_us"></a>
 
     <div class="container general_info">
       <div class="general_info__text">
         <div class="general_info__text_block">
+          <div class="text_block__separator"></div>
           <p class="text_block__first">The Guest House is the perfect weekend get-away housing. Located in the Norwegian
             archipelago, Lofoten, it's a
             great escape from the hustle and bustle of the city. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -57,36 +63,44 @@
               out to us vi the contact page if you have any questions around your stay.
             </p>
 
-            <button class="button book">Book now</button>
+            <button class="button book" onclick="toggleBookingForm()">Book now</button>
           </div>
         </div>
       </div>
 
       <h1 class="general_info__tagline">The Guest House is the perfect weekend getaway cabin.</h1>
-      <div class="general_info__img"></div>
     </div>
 
     <div class="container arrangements">
-      <div class="arrangements_general">
+      <div class="arrangements_kitchen">
+        <div class="arrangements_kitchen__overlay"></div>
+        <div class="arrangements_kitchen__text-block">
+          <h4>Kitchen.</h4>
+          <p class="arrangements_kitchen__info">Fully equipped moden kitchen with great appliances. If you need anything
+            specific, get in touch and we'll see what we can do.</p>
+        </div>
+      </div>
+
+      <div class="arrangements_bedroom">
         <h4>Sleeping arrangements.</h4>
-        <p class="arrangements_general__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+        <p class="arrangements_bedroom__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           scelerisque aliquam odio et faucibus. Nulla
           rhoncus feugiat eros quis consectetur.</p>
 
-        <div class="arrangements_details">
-          <div class="arrangements_details__item">
+        <div class="arrangements_bedroom_details">
+          <div class="arrangements_bedroom_details__item">
             <img src="./dist/img/Beds.png" alt="">
             <p>Beds</p>
             <p>The cabin is equipped with 12 beds, 4 of which are in bunk. The rent includes linens for all beds.</p>
           </div>
 
-          <div class="arrangements_details__item">
+          <div class="arrangements_bedroom_details__item">
             <img src="./dist/img/Bedrooms.png" alt="">
             <p>Bedrooms</p>
             <p>Spread out over two floors, the cabin offers 4 bedrooms. Ranging from 2 to 4 beds per room.</p>
           </div>
 
-          <div class="arrangements_details__item">
+          <div class="arrangements_bedroom_details__item">
             <img src="./dist/img/Bathrooms.png" alt="">
             <p>Bathrooms</p>
             <p>The cabin has three bathrooms, all equipped with showers and one with a bath tub,</p>
@@ -153,19 +167,74 @@
       </div>
     </div>
 
-    <div class="container comments">
-      <div class="comments_general">
+    <div class="container review">
+      <div class="review__general">
         <h4>Past guests.</h4>
         <p>Don't take our word for it! Have a look at what our previous guests say about their stay at the Guest
           House.
         </p>
       </div>
 
-      <div>comments</div>
+      <div class="review__block">
+        <span class="review__arrow prev"><i class="fa-solid fa-chevron-left"></i></span>
+        <span class="review__arrow next"><i class="fa-solid fa-chevron-right"></i></i></span>
+        <div class="review__items">
+          <div class="review_item">
+            <p class="review_item__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+            <h6 class="review_item__title">We had an amazing stay at the Guest House!</h6>
+            <p class="review_item__text">This place is very well located and surrounded by a beautiful scenery. The
+              cabin was really comfy and
+              clean. We had the chance to prepare our meals and have a nice rest. Surely a place to return and to give
+              as
+              advice to friends.</p>
+            <p class="review_item__name">Nate Davidsson</p>
+          </div>
+
+          <div class="review_item">
+            <p class="review_item__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+            <h6 class="review_item__title">Beautiful little hideaway.</h6>
+            <p class="review_item__text"> It was hard to force myself, to stop wandering around with my camera and go
+              to
+              sleep.
+              One of most beautiful places on earth.
+              Although i was around 6 degrees when we arrived, it took about 15 minutes to heat cabin to 20.
+              Exceptionally silent.</p>
+            <p class="review_item__name">Laura Paulie</p>
+          </div>
+
+          <div class="review_item">
+            <p class="review_item__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+            <h6 class="review_item__title">Best vacation ever!</h6>
+            <p class="review_item__text">Absolutely fantastic place with a stunning view, one of the most beautiful
+              places we've ever slept in. The
+              staff was nice and the check-in and check-out process was easy. The house had a beautiful living room with
+              a
+              breathtaking panorama on the lake, the apartment had everything we needed and was just as in the photos.
+              The
+              bathroom was very comfortable, which is quite rare. The parking was big and comfortable.</p>
+            <p class="review_item__name">Greg Todd</p>
+          </div>
+          <div class="review_item" data-index="5">
+            <a href="/">See more reviews</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container together">
-      <div class="together__img"></div>
+      <div class="together_bedrooms">
+        <div class="together_bedrooms__overlay"></div>
+        <div class="together_bedrooms__text-block">
+          <h4>Bedrooms.</h4>
+          <p class="together_bedrooms__info">In each bedroom you'll find a selection of foam mattresses and buckwheat
+            pillows.</p>
+        </div>
+      </div>
+
+
       <div class="together__info">
         <div class="together__general">
           <h4>Come together.</h4>
@@ -198,61 +267,112 @@
 
     <div class="container book">
       <div class="book_general">
-        <p>We're already booked up for the spring — hurry up & secure your stay for the summer.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>We're almost booked up for the next few month — hurry up & secure your stay.</p>
+        <p>Get your unforgettable memories in the incredible scenery of the Nordic nature.</p>
         <div class="buttons_block">
           <button class="button">Contact</button>
-          <button class="button book">Book now</button>
+          <button class="button book" onclick="toggleBookingForm()">Book now</button>
         </div>
       </div>
     </div>
 
-    <footer>
-      <div class="container footer">
-        <div class="footer_links">
-          <div class="footer_links__pages">
-            <h4>Pages</h4>
-            <ul class="links_pages__list">
-              <li><a href="https://">Start</a></li>
-              <li><a href="https://">Contact</a></li>
-              <li><a href="https://">Our history</a></li>
-              <li><a href="https://">Licenses</a></li>
-              <li><a href="https://">Instructions</a></li>
-              <li><a href="https://">Style guide</a></li>
-            </ul>
+    <div class="container booking">
+      <div class="reservation">
+        <button class="button close" onclick="toggleBookingForm()">x</button>
+        <form class="reservation_form" action="" method="post">
+          <div class="reservation_form__element">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
           </div>
-
-          <div class="footer_links__media">
-            <h4>Social Media</h4>
-            <ul class="links_media__list">
-              <li><a href="https://web.telegram.org"><i class="fa-brands fa-telegram"></i></a></li>
-              <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-            </ul>
+          <div class="reservation_form__element">
+            <label for="email">Your E-mail</label>
+            <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
           </div>
-
-          <div class="footer_links__subscribe">
-            <h4>Newsletter</h4>
-            <p>Subscribe, if you want to recive news about our disconts</p>
-            <form action="#" class="links_subscribe__form">
-              <input type="mail" placeholder="Email">
-              <button type="submit" class="button subscribe">Subscribe</button>
-            </form>
+          <div class="reservation_form__element">
+            <label for="phone">Your Phone</label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872"
+              pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
           </div>
-        </div>
-
-        <div class="footer_copyrights">
-          <img class="footer__logo" src="./dist/img/logo.png" alt="logo">
-          <p> &#169; Guest House, LLC. All rights reserved. Powered by Webflow</p>
-          <p><a href="tel:+47 (0) 702 88 12 34">+47 (0) 702 88 12 34</a>
-            <a href="mailto:example@webflow.io">example@webflow.io</a>
-          </p>
-          <p>Klubbvika 12, 8310 Kabelvag, Norway</p>
-        </div>
+          <div class="reservation_form_data-block">
+            <div class="reservation_form__element">
+              <label for="adult">Adults</label>
+              <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+            </div>
+            <div class="reservation_form__element">
+              <label for="child">Children</label>
+              <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+            </div>
+            <div class="reservation_form__element">
+              <label for="checkin-date">Check-in Date</label>
+              <input type="date" id="checkin-date" name="checkin" required>
+            </div>
+            <div class="reservation_form__element">
+              <label for="checkout-date">Check-out Date</label>
+              <input type="date" id="checkout-date" name="checkout" required>
+            </div>
+          </div>
+          <div class="reservation_form__element">
+            <label for="message">Anything Else?</label>
+            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important."
+              required></textarea>
+          </div>
+          <div class="button-block">
+            <button class="button submit" type="submit">Book your house</button>
+            <button class="button reject" onclick="toggleBookingForm()">Cancel</button>
+          </div>
+        </form>
       </div>
-    </footer>
+    </div>
+
+    <button class="button to_start"><a href="#start"><i class="fa-solid fa-arrow-up"></i></a></button>
 
   </main>
+
+  <footer>
+    <div class="container footer">
+
+      <a name="contacts"></a>
+
+      <div class="footer_links">
+        <div class="footer_links__pages">
+          <h4>Pages</h4>
+          <ul class="links_pages__list">
+            <li><a href="https://">Start</a></li>
+            <li><a href="https://">Reviews</a></li>
+            <li><a href="https://">About us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_links__media">
+          <h4>Social Media</h4>
+          <ul class="links_media__list">
+            <li><a href="https://web.telegram.org"><i class="fa-brands fa-telegram"></i></a></li>
+            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="footer_links__subscribe">
+          <h4>Newsletter</h4>
+          <p>Subscribe, if you want to recive news about our disconts</p>
+          <form action="#" class="links_subscribe__form">
+            <input class="input" type="mail" placeholder="Email">
+            <button type="submit" class="button subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer_copyrights">
+        <img class="footer__logo" src="./dist/img/logo.png" alt="logo">
+        <p> &#169; Guest House, LLC. All rights reserved. Powered by Webflow</p>
+        <p><a href="tel:+47 (0) 702 88 12 34">+47 (0) 702 88 12 34</a>
+          <a href="mailto:example@webflow.io">example@webflow.io</a>
+        </p>
+        <p>Klubbvika 12, 8310 Kabelvag, Norway</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="./dist/js/scripts.min.js"></script>
 </body>
 

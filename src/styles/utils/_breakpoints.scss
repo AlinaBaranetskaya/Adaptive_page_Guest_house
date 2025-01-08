@@ -22,4 +22,10 @@
         @content;
       }
     }
+
+    @else if $point==phone {
+      @media (min-width: 400px) {
+        @content;
+      }
+    }
   }

@@ -1,85 +1,147 @@
 .arrangements {
-    text-align: center;
-    background-color: $background-color;
-  
-    & h6 {
-      padding: 15px 0;
+  text-align: center;
+  background-color: $background-color;
+
+  &_bedroom__info {
+    width: 90%;
+  }
+
+  &_kitchen {
+    @include backgroundImg;
+    background-image: url(../../dist/img/kitchen.jpg);
+    position: relative;
+    z-index: 2;
+    height: 200px;
+    color: $text-color-dark-main;
+
+    &__overlay { 
+      height: 200px;   
+      @include overlayForMobile;
     }
-  
-    &_general__info {
+
+    &__text-block {
       width: 90%;
-    }
-  
-    &_details {
-      display: flex;
-      justify-content: space-around;
-      width: 80%;
       margin: 0 auto;
-      padding: 20px 0;
-  
+      grid-area: text-block;
+
+      & h4 {
+        margin: 0 auto;
+        width: 90%;
+      }
+    }
+  }
+
+  &_bedroom_details {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    &__item {
+      & p:first-of-type {
+        padding: 10px 0 0 0;
+      }
+
+      & p:last-of-type {
+        display: none;
+      }
+
+      & img {
+        width: 75%;
+      }
+    }
+  }
+
+  @include breakpoint(lg-phone) {
+    &_kitchen {
+      height: 300px;
+      @include gridTemplate;
+
+      &__overlay {
+        height: 300px;
+        @include overlay;
+      }
+
+      &__text-block {
+        & h4 {
+          padding: 0;
+          text-align: left;
+
+          &::before {
+            content: "";
+            display: none;
+            @include separator_left;
+          }
+        }
+      }
+
+      &__info {
+        text-align: left;
+      }
+    }
+
+    &_bedroom_details {
+      width: 80%;
+      padding: 25px 0;
+
+      &__item {
+        & img {
+          width: 65px;
+        }
+
+        & p {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &_kitchen {
+      height: 400px;
+
+      &__overlay {
+        height: 400px;
+      }
+    }
+
+    &_bedroom__info {
+      width: 70%;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    &_kitchen {
+      height: 550px;
+      @include gridTemplateDesktop;
+
+      &__overlay {
+        height: 550px;
+      }
+    }
+
+    &_bedroom__info {
+      width: 50%;
+    }
+
+    &_bedroom_details {
+      padding: 40px 0 60px 0;
+
       &__item {
         & p:first-of-type {
-          padding: 10px 0 0 0;
+          padding: 15px 0;
         }
-  
+
         & p:last-of-type {
-          display: none;
+          display: block;
+          width: 90%;
         }
-  
+
         & img {
-          width: 75%;
+          width: 80px;
         }
       }
     }
-  
-    @include breakpoint(lg-phone) {
-      &_details {
-        width: 80%;
-        padding: 25px 0;
-  
-        &__item {
-          & img {
-            width: 65px;
-          }
-  
-          & p {
-            width: 100%;
-          }
-        }
-      }
-    }
-  
-    @include breakpoint(tablet) {
-      &_general__info {
-        width: 70%;
-      }
-  
-      &_details {}
-    }
-  
-    @include breakpoint(desktop) {
-      &_general__info {
-        width: 50%;
-      }
-  
-      &_details {
-        padding: 40px 0 60px 0;
-  
-        &__item {
-          & p:first-of-type {
-            padding: 15px 0;
-          }
-  
-          & p:last-of-type {
-            display: block;
-            width: 90%;
-          }
-  
-          & img {
-            width: 80px;
-          }
-        }
-      }
-    }
-  
   }
+}

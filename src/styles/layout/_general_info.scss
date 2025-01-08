@@ -1,4 +1,19 @@
 .general_info {
+    & .text_block__separator {
+        grid-area: separator;
+        &::before {
+            @include separator;
+        }
+    }
+
+    & .text_block__first {
+        grid-area: first;
+    }
+
+    & .text_block__second {
+        grid-area: second;
+    }
+
     &__text {
         background-color: $background-color;
 
@@ -10,19 +25,7 @@
             & p {
                 padding-bottom: $spacing-sm;
             }
-
-            & .text_block__first {
-                &::before {
-                    @include separator;
-                }
-            }
         }
-    }
-
-    &__img {
-        @include backgroundImg;
-        background-image: url(../../dist/img/kitchen.jpg);
-        height: 200px;
     }
 
     &__tagline {
@@ -42,21 +45,28 @@
     @include breakpoint(lg-phone) {}
 
 
-    @include breakpoint(tablet) {
+    @include breakpoint(tablet) {      
         &__text_block {
             width: 80%;
-            padding: 50px 0 30px 0;
+            padding: 45px 0 30px 0;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 25px;
+            
+            grid-template-areas:
+                "separator separator"
+                "first second"
+            ;
 
             & p {
                 text-align: start;
                 width: 100%;
             }
 
-            & .text_block__second {
-                padding-top: 35px;
+            & .text_block__first {
+                &::before {
+                    display: none;
+                }
             }
         }
 
@@ -65,10 +75,6 @@
             margin: 60px auto;
             font-size: $biggest-font-size;
             line-height: $spacing-xxl;
-        }
-
-        &__img {
-            height: 300px;
         }
     }
 
@@ -83,10 +89,6 @@
             margin: 100px auto;
             font-size: $huge-font-size;
             line-height: $spacing-xxxl;
-        }
-
-        &__img {
-            height: 550px;
         }
     }
 }

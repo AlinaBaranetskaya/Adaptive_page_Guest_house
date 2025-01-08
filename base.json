@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "rating": 5,
+        "title": "We had an amazing stay at the Guest House!",
+        "description": "This place is very well located and surrounded by a beautiful scenery. The cabin was really comfy and clean. We had the chance to prepare our meals and have a nice rest. Surely a place to return and to give as advice to friends.",
+        "guest_name": "Nate Davidsson"
+    },
+    {
+        "id": 2,
+        "rating": 5,
+        "title": "Beautiful little hideaway",
+        "description": "It was hard to force myself, to stop wandering around with my camera and go to sleep. One of most beautiful places on earth. Although i was around 6 degrees when we arrived, it took about 15 minutes to heat cabin to 20. Exceptionally silent.",
+        "guest_name": "Laura Paulie"
+    },
+    {
+        "id": 3,
+        "rating": 5,
+        "title": "Best vacation ever!",
+        "description": "Absolutely fantastic place with a stunning view, one of the most beautiful places we've ever slept in. The staff was nice and the check-in and check-out process was easy. The house had a beautiful living room with a breathtaking panorama on the lake, the apartment had everything we needed and was just as in the photos. The bathroom was very comfortable, which is quite rare. The parking was big and comfortable.",
+        "guest_name": "Greg Todd"
+    }
+]
+

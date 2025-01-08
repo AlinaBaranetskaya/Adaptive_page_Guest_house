@@ -1,17 +1,33 @@
 .button {
     display: block;
-    padding: 7px 20px;
+    box-sizing: border-box;
+    width: 90px;
+    margin: 0 auto;
+    padding: 7px 0;
     cursor: pointer;
-    border: none;
+    // border: none;
     outline: none;
     align-self: center;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    
+
+    &.close {
+        width: 1.25rem;
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        padding: 3px;
+        background-color: $secondary-color;
+
+        &:hover {
+            border: 1px solid black;
+        }
+    }
+
     &.book {
         background-color: $text-color-dark-secondary;
         color: $text-color-light;
@@ -20,7 +36,7 @@
     &.subscribe {
         position: absolute;
         font-size: 12px;
-        border: none;
+        // border: 1px solid transparent;
         background-color: $text-color-dark-secondary;
         color: $text-color-light;
         right: 14%;
@@ -35,28 +51,81 @@
         -o-transform: translateY(-50%);
     }
 
-    &:hover{
+    &:hover {
         background-color: $secondary-color;
     }
 
+    &.submit {
+        background-color: $secondary-color;
+
+        &:hover {
+            color: $text-color-light;
+        }
+    }
+
+    &.reject {
+        background-color: $background-color;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+
     @include breakpoint(tablet) {
-        padding: 10px 25px;
+        width: 110px;
+        padding: 10px 0;
     }
 
     @include breakpoint(desktop) {
-        padding: 12px 30px;
+        width: 130px;
+        padding: 12px 0;
     }
 }
 
 .general_info .button {
-    margin: 0 auto;
-    @include breakpoint(lg-phone) {
+    @include breakpoint(tablet) {
         margin: 0;
     }
 }
 
 .header .button {
     @include breakpoint(lg-phone) {
+        margin: 10px 10px auto 0;
+    }
+
+    @include breakpoint(tablet) {
         margin: auto 3% auto 0;
     }
+}
+
+.submit,
+.reject {
+    width: 45%;
+    font-size: $smaller-font-size;
+    box-sizing: border-box;
+
+    &:hover {
+        border: 1px solid $text-color-dark-secondary;
+    }
+
+    @include breakpoint(tablet) {
+        width: 35%;
+    }
+}
+
+.to_start {
+    position: fixed;
+    width: 45px;
+    bottom: 3%;
+    right: 3%;
+    background-color: $secondary-color;
+    color: $text-color-light;
+    font-size: $small-font-size;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-border-radius: 50%;
 }

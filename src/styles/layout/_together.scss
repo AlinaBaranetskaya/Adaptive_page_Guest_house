@@ -1,14 +1,33 @@
 .together {
-    &__img {
+    &_bedrooms {
         @include backgroundImg;
         background-image: url(../../dist/img/room.jpg);
+        position: relative;
+        z-index: 2;
         height: 200px;
+        color: $text-color-dark-main;
+
+        &__overlay {
+            height: 200px;
+            @include overlayForMobile;
+        }
+
+        &__text-block {
+            width: 90%;
+            margin: 0 auto;
+            grid-area: text-block;
+
+            & h4 {
+                margin: 0 auto;
+                width: 90%;
+            }
+        }
     }
 
     &_details {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 20px;    
+        grid-column-gap: 20px;
         width: 80%;
         text-align: center;
         margin: 20px auto;
@@ -18,10 +37,42 @@
         }
     }
 
-    @include breakpoint(tablet) {
-
-        &__img {
+    @include breakpoint(lg-phone) {
+        &_bedrooms {
             height: 300px;
+            @include gridTemplate;
+
+            &__overlay {
+                height: 300px;
+                @include overlay;
+            }
+
+            &__text-block {
+                & h4 {
+                    padding: 0;
+                    text-align: left;
+
+                    &::before {
+                        content: "";
+                        display: none;
+                        @include separator_left;
+                    }
+                }
+            }
+
+            &__info {
+                text-align: left;
+            }
+        }
+    }
+
+    @include breakpoint(tablet) {
+        &_bedrooms {
+            height: 400px;
+
+            &__overlay {
+                height: 400px;
+            }
         }
 
         &_details {
@@ -30,29 +81,54 @@
     }
 
     @include breakpoint(desktop) {
-
-        &__img {
+        &_bedrooms {
             height: 550px;
         }
 
         &__info {
-            display: flex;
+            display: grid;
+            grid-template-columns: 0.85fr 1fr;
         }
 
         &__general {
             padding-bottom: 50px;
+            width: 80%;
+            margin: 0 auto;
+
+            & h4 {
+                text-align: left;
+
+                &::before {
+                    margin: 15px 0;
+                }
+            }
+
+            & p {
+                width: 100%;
+                text-align: left;
+            }
         }
 
         &_details {
-            width: 50%;
+            width: 90%;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 10px;
+            margin: 20px 0;
 
             &__item {
-                display: flex;
+                display: grid;
+                grid-template-columns: 1fr 5fr;
 
                 & p {
                     display: block;
+                    font-size: $small-font-size;
+                    align-self: center;
+                    text-align: left;
+                }
+
+                & img {
+                    align-self: center;
                 }
             }
         }

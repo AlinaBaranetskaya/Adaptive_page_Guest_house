@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/css/styles.min.css" />
+    <script src="https://kit.fontawesome.com/88607aadf9.js" crossorigin="anonymous"></script>
+    <title>Guest house</title>
+</head>
+
+<body>
+    <header class="container">
+
+        <a name="start"></a>
+
+        <div class="header">
+            <a class="header__logo" href="https://www.google.com/"><img class="header__logo_img"
+                    src="./dist/img/logo.png" alt="logo"></a>
+
+            <nav class="header__menu">
+                <ul class="header_navigation dropdown">
+                    <!-- <li class="header_navigation__item"><a href="https://">Start</a></li> -->
+                    <li class="header_navigation__item"><a href="../index.html">About us</a></li>
+                    <li class="header_navigation__item"><a href="https://">Reviews</a></li>
+                    <li class="header_navigation__item"><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <button class="button" onclick="toggleBookingForm()">Book now</button>
+
+            <div class="header__burger" onclick="showCross(this); showMenu()">
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container reviews">
+
+            <div class="review_items">
+                <div class="review_-item">
+                    <p class="review_item__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></p>
+                    <h6 class="review_item__title">We had an amazing stay at the Guest House!</h6>
+                    <p class="review_item__text">This place is very well located and surrounded by a beautiful scenery.
+                        The
+                        cabin was really comfy and
+                        clean. We had the chance to prepare our meals and have a nice rest. Surely a place to return and
+                        to give
+                        as
+                        advice to friends.</p>
+                    <p class="review_item__name">Nate Davidsson</p>
+                </div>
+
+                <div class="review_-item">
+                    <p class="review_item__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></p>
+                    <h6 class="review_item__title">Beautiful little hideaway.</h6>
+                    <p class="review_item__text"> It was hard to force myself, to stop wandering around with my camera
+                        and go
+                        to
+                        sleep.
+                        One of most beautiful places on earth.
+                        Although i was around 6 degrees when we arrived, it took about 15 minutes to heat cabin to 20.
+                        Exceptionally silent.</p>
+                    <p class="review_item__name">Laura Paulie</p>
+                </div>
+
+                <div class="review_-item">
+                    <p class="review_item__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></p>
+                    <h6 class="review_item__title">Best vacation ever!</h6>
+                    <p class="review_item__text">Absolutely fantastic place with a stunning view, one of the most
+                        beautiful
+                        places we've ever slept in. The
+                        staff was nice and the check-in and check-out process was easy. The house had a beautiful living
+                        room with
+                        a
+                        breathtaking panorama on the lake, the apartment had everything we needed and was just as in the
+                        photos.
+                        The
+                        bathroom was very comfortable, which is quite rare. The parking was big and comfortable.</p>
+                    <p class="review_item__name">Greg Todd</p>
+                </div>
+
+                <div class="review_-item">
+                    <p class="review_item__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></p>
+                    <h6 class="review_item__title">Best vacation ever!</h6>
+                    <p class="review_item__text">Absolutely fantastic place with a stunning view, one of the most
+                        beautiful
+                        places we've ever slept in. The
+                        staff was nice and the check-in and check-out process was easy. The house had a beautiful living
+                        room with
+                        a
+                        breathtaking panorama on the lake, the apartment had everything we needed and was just as in the
+                        photos.
+                        The
+                        bathroom was very comfortable, which is quite rare. The parking was big and comfortable.</p>
+                    <p class="review_item__name">Greg Todd</p>
+                </div>
+                <div class="review_-item">
+                    <p class="review_item__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></p>
+                    <h6 class="review_item__title">Best vacation ever!</h6>
+                    <p class="review_item__text">Absolutely fantastic place with a stunning view, one of the most
+                        beautiful
+                        places we've ever slept in. The
+                        staff was nice and the check-in and check-out process was easy. The house had a beautiful living
+                        room with
+                        a
+                        breathtaking panorama on the lake, the apartment had everything we needed and was just as in the
+                        photos.
+                        The
+                        bathroom was very comfortable, which is quite rare. The parking was big and comfortable.</p>
+                    <p class="review_item__name">Greg Todd</p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="container booking">
+            <div class="reservation">
+                <button class="button close" onclick="toggleBookingForm()">x</button>
+                <form class="reservation_form" action="reservation.php" method="post">
+                    <div class="reservation_form__element">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20}
+                            required>
+                    </div>
+                    <div class="reservation_form__element">
+                        <label for="email">Your E-mail</label>
+                        <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+                    </div>
+                    <div class="reservation_form__element">
+                        <label for="phone">Your Phone</label>
+                        <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872"
+                            pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                    </div>
+                    <div class="reservation_form__element inlined">
+                        <label for="adult">Adults</label>
+                        <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+                    </div>
+                    <div class="reservation_form__element inlined">
+                        <label for="child">Children</label>
+                        <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+                    </div>
+                    <div class="reservation_form__element inlined">
+                        <label for="checkin-date">Check-in Date</label>
+                        <input type="date" id="checkin-date" name="checkin" required>
+                    </div>
+                    <div class="reservation_form__element inlined">
+                        <label for="checkout-date">Check-out Date</label>
+                        <input type="date" id="checkout-date" name="checkout" required>
+                    </div>
+                    <div class="reservation_form__element">
+                        <label for="message">Anything Else?</label>
+                        <textarea id="message" name="visitor_message"
+                            placeholder="Tell us anything else that might be important." required></textarea>
+                    </div>
+                    <button type="submit">Book your house</button>
+                    <button onclick="toggleBookingForm()">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+
+        <button class="button to_start"><a href="#start"><i class="fa-solid fa-arrow-up"></i></a></button>
+
+    </main>
+
+    <footer>
+        <div class="container footer">
+
+            <a name="contacts"></a>
+
+            <div class="footer_links">
+                <div class="footer_links__pages">
+                    <h4>Pages</h4>
+                    <ul class="links_pages__list">
+                        <li><a href="https://">Start</a></li>
+                        <li><a href="https://">Reviews</a></li>
+                        <li><a href="https://">About us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_links__media">
+                    <h4>Social Media</h4>
+                    <ul class="links_media__list">
+                        <li><a href="https://web.telegram.org"><i class="fa-brands fa-telegram"></i></a></li>
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_links__subscribe">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe, if you want to recive news about our disconts</p>
+                    <form action="#" class="links_subscribe__form">
+                        <input class="input" type="mail" placeholder="Email">
+                        <button type="submit" class="button subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer_copyrights">
+                <img class="footer__logo" src="./dist/img/logo.png" alt="logo">
+                <p> &#169; Guest House, LLC. All rights reserved. Powered by Webflow</p>
+                <p><a href="tel:+47 (0) 702 88 12 34">+47 (0) 702 88 12 34</a>
+                    <a href="mailto:example@webflow.io">example@webflow.io</a>
+                </p>
+                <p>Klubbvika 12, 8310 Kabelvag, Norway</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./dist/js/scripts.min.js"></script>
+</body>
+
+</html>

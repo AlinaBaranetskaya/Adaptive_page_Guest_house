@@ -1,67 +1,107 @@
-.escape_details {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    width: 90%;
-    text-align: center;
-    margin: 20px auto;
-
-    &__item p {
-        display: none;
-    }
-
-    @include breakpoint(lg-phone) {
-        width: 80%;
-    }
-
-    @include breakpoint(tablet) {
-        margin: 25px auto;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        &__item {
-            display: flex;
-        }
-
-        &__item img {
-            width: 30px;
-            margin-right: 20px;
-        }
-
-        &__item p:first-of-type {
-            display: block;
-            text-align: start;
-        }
-    }
+.escape {
+    display: flex;
+    flex-direction: column;
 
     @include breakpoint(desktop) {
-        margin: 40px auto;
-        grid-template-columns: repeat(2, 1fr);
-      
-        &__item {
-            display: grid;
-            grid-template-areas:
-                "img title"
-                "img text";
+        display: grid;
+        grid-template-areas:
+            "general ."
+            "details details"
+        ;
+    }
+
+    &_general {
+        grid-area: general;
+        width: 90%;
+        margin: 0 auto;
+
+        & p {
+            width: 100%;
+            text-align: center;
         }
+
+        @include breakpoint(desktop) {
+            width: 80%;
+            text-align: left;
+
+            & h4 {
+                text-align: left;
+
+                &::before {
+                    margin: 15px 0;
+                }
+            }
+
+            & p {
+                width: 50%;
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+
+    &_details {
+        grid-area: details;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        width: 80%;
+        text-align: center;
+        margin: 20px auto;
 
         &__item p {
-            display: block;
-            text-align: start;
+            display: none;
         }
 
-        &__item img {
-            width: 50px;
-            grid-area: img;
+        @include breakpoint(tablet) {
+            margin: 25px auto;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            &__item {
+                display: flex;
+            }
+
+            &__item img {
+                width: 30px;
+                margin-right: 20px;
+            }
+
+            &__item p:first-of-type {
+                display: block;
+                text-align: start;
+            }
         }
 
-        &__item p:first-of-type {
-            grid-area: title;
-        }
+        @include breakpoint(desktop) {
+            margin: 40px auto;
+            grid-template-columns: repeat(2, 1fr);
 
-        &__item p:last-of-type {
-            grid-area: text;
+            &__item {
+                display: grid;
+                grid-template-areas:
+                    "img title"
+                    "img text";
+            }
+
+            &__item p {
+                display: block;
+                text-align: start;
+            }
+
+            &__item img {
+                width: 50px;
+                grid-area: img;
+            }
+
+            &__item p:first-of-type {
+                grid-area: title;
+            }
+
+            &__item p:last-of-type {
+                grid-area: text;
+            }
         }
     }
 }

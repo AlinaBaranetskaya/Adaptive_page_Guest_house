@@ -8,12 +8,48 @@
 
 @mixin separator {
     content: "";
-    width: 25px;
-    height: 5px;
+    width: 2.5rem;
+    height: 0.35rem;
     background-color: #E08631;
     display: block;
-    margin: 0 auto;
     margin: 15px auto;
+}
+
+@mixin separator_left {
+    content: "";
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #E08631;
+    display: block;
+    margin: 15px 0;
+}
+
+@mixin overlayForMobile {
+    position: absolute;
+    z-index: -1;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-image: radial-gradient(#fff, transparent)
+}
+
+@mixin overlay {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(35%, rgba(82, 80, 59, 0)), to(#fff));
+    background-image: linear-gradient(90deg, rgba(82, 80, 59, 0) 35%, #fff);
+}
+
+@mixin gridTemplate {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: ". text-block";
+    text-align: left;
+}
+
+@mixin gridTemplateDesktop{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . text-block";
 }
 
 @mixin pForMobile {
